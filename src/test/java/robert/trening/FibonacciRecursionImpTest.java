@@ -26,4 +26,8 @@ public class FibonacciRecursionImpTest {
     fibonacci.compute(-1);
   }
 
+  @Test(expected = IllegalArgumentException.class)
+  public void computeNegativeCaseExpectedAttribute1() {
+    fibonacci.compute(93);
+  }
 }

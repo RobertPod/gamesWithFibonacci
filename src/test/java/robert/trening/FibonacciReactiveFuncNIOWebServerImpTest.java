@@ -27,6 +27,14 @@ public class FibonacciReactiveFuncNIOWebServerImpTest {
   @Test
   public void computeNegativeCaseRuleExpectedException() {
     exception.expect(IllegalArgumentException.class);
+    exception.expectMessage("The argument must be positive");
+
+    fibonacci.compute(-1);
+  }
+
+  @Test
+  public void computeNegativeCaseRuleExpectedException1() {
+    exception.expect(IllegalArgumentException.class);
     exception.expectMessage("The maximum input value for long type output is 92");
 
     fibonacci.compute(93);
