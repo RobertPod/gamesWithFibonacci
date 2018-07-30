@@ -20,43 +20,43 @@ public class FibonacciComparisonOfImplementationsJMHTest {
   public static class MyState {
 
     FibonacciIterationImp iterationImp;
-    FibonacciImp fibonacciImp;
+    FibonacciStreamImp fibonacciStreamImp;
 
     @Setup
     public void init() {
       iterationImp = new FibonacciIterationImp();
-      fibonacciImp = new FibonacciImp();
+      fibonacciStreamImp = new FibonacciStreamImp();
     }
   }
 
   @Benchmark
-  public void AcomputeIiteration_30(MyState state) {
+  public void iterationImp_30(MyState state) {
     assertEquals("Result", 832040, state.iterationImp.compute(30));
   }
 
   @Benchmark
-  public void BcomputeIiteration_60(MyState state) {
+  public void iterationImp_60(MyState state) {
     assertEquals("Result", 1548008755920L, state.iterationImp.compute(60));
   }
 
   @Benchmark
-  public void CcomputeIiteration_90(MyState state) {
+  public void iterationImp_90(MyState state) {
     assertEquals("Result", 2880067194370816120L, state.iterationImp.compute(90));
   }
 
   @Benchmark
-  public void DcomputeFibonacci_30(MyState state) {
-    assertEquals("Result", 832040, state.fibonacciImp.compute(30));
+  public void streamImp_30(MyState state) {
+    assertEquals("Result", 832040, state.fibonacciStreamImp.compute(30));
   }
 
   @Benchmark
-  public void EcomputeFibonacci_60(MyState state) {
-    assertEquals("Result", 1548008755920L, state.fibonacciImp.compute(60));
+  public void streamImp_60(MyState state) {
+    assertEquals("Result", 1548008755920L, state.fibonacciStreamImp.compute(60));
   }
 
   @Benchmark
-  public void FcomputeFibonacci_90(MyState state) {
-    assertEquals("Result", 2880067194370816120L, state.fibonacciImp.compute(90));
+  public void streamImp_90(MyState state) {
+    assertEquals("Result", 2880067194370816120L, state.fibonacciStreamImp.compute(90));
   }
 
   @Test

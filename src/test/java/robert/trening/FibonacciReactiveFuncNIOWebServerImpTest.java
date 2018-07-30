@@ -21,11 +21,6 @@ public class FibonacciReactiveFuncNIOWebServerImpTest {
     assertEquals(55L, fibonacci.compute(10));
   }
 
-  @Test(expected = IllegalArgumentException.class)
-  public void computeNegativeCaseExpectedAttribute() {
-    fibonacci.compute(-1);
-  }
-
   @Rule
   public ExpectedException exception = ExpectedException.none();
 

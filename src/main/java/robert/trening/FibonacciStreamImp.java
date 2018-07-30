@@ -2,7 +2,7 @@ package robert.trening;
 
 import java.util.stream.Stream;
 
-public class FibonacciImp implements Fibonacci {
+public class FibonacciStreamImp implements Fibonacci {
 
   public long compute(int n) {
     if (n < 0) {
@@ -24,6 +24,6 @@ public class FibonacciImp implements Fibonacci {
 
   public static void main(String... arg) {
     int input = 6;
-    System.out.println("For " + input + " Fibonacci is " + new FibonacciImp().compute(input));
+    System.out.println("For " + input + " Fibonacci is " + new FibonacciStreamImp().compute(input));
   }
 }

@@ -31,7 +31,7 @@ public class FibonacciParametrizedTest {
 
   @Test
   public void computePossitiveCase() {
-    FibonacciImp fibonacci = new FibonacciImp();
+    FibonacciStreamImp fibonacci = new FibonacciStreamImp();
 
     assertEquals("Result", result, fibonacci.compute(input));
   }

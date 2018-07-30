@@ -26,14 +26,4 @@ public class FibonacciRecursionImpTest {
     fibonacci.compute(-1);
   }
 
-  @Rule
-  public ExpectedException exception = ExpectedException.none();
-
-  @Test
-  public void computeNegativeCaseRuleExpectedException() {
-    exception.expect(IllegalArgumentException.class);
-    exception.expectMessage("The maximum input value for long type output is 92");
-
-    fibonacci.compute(93);
-  }
 }

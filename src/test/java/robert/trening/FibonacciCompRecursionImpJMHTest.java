@@ -21,49 +21,49 @@ public class FibonacciCompRecursionImpJMHTest {
 
     FibonacciRecursionImp recursionImp;
     FibonacciIterationImp iterationImp;
-    FibonacciImp fibonacciImp;
+    FibonacciStreamImp fibonacciStreamImp;
 
     @Setup
     public void init() {
       recursionImp = new FibonacciRecursionImp();
       iterationImp = new FibonacciIterationImp();
-      fibonacciImp = new FibonacciImp();
+      fibonacciStreamImp = new FibonacciStreamImp();
     }
   }
 
   @Benchmark
-  public void Acompute_08(MyState state) {
+  public void fibRecursionImp_08(MyState state) {
     assertEquals("Result", 21, state.recursionImp.compute(8));
   }
 
   @Benchmark
-  public void Bcompute_16(MyState state) {
+  public void fibRecursionImp_16(MyState state) {
     assertEquals("Result", 987, state.recursionImp.compute(16));
   }
 
   @Benchmark
-  public void Ccompute_24(MyState state) {
+  public void fibRecursionImp_24(MyState state) {
     assertEquals("Result", 46368, state.recursionImp.compute(24));
   }
 
   @Benchmark
-  public void Dcompute_32(MyState state) {
+  public void fibRecursionImp_32(MyState state) {
     assertEquals("Result", 2178309, state.recursionImp.compute(32));
   }
 
   @Benchmark
-  public void Ecompute_40(MyState state) {
+  public void fibRecursionImp_40(MyState state) {
     assertEquals("Result", 102334155, state.recursionImp.compute(40));
   }
 
   @Benchmark
-  public void JcomputeIiteration_40(MyState state) {
+  public void iterationImp_40(MyState state) {
     assertEquals("Result", 102334155, state.iterationImp.compute(40));
   }
 
   @Benchmark
-  public void OcomputeFibonacci_40(MyState state) {
-    assertEquals("Result", 102334155, state.fibonacciImp.compute(40));
+  public void streamImp_40(MyState state) {
+    assertEquals("Result", 102334155, state.fibonacciStreamImp.compute(40));
   }
 
 

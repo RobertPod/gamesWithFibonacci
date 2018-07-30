@@ -21,11 +21,6 @@ public class FibonacciIterationImpTest {
     assertEquals(514229L, fibonacci.compute(29));
   }
 
-  @Test(expected = IllegalArgumentException.class)
-  public void computeNegativeCaseExpectedAttribute() {
-    fibonacci.compute(-1);
-  }
-
   @Rule
   public ExpectedException exception = ExpectedException.none();
 

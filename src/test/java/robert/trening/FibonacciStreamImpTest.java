@@ -7,23 +7,18 @@ import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 
-public class FibonacciTest {
+public class FibonacciStreamImpTest {
 
-  FibonacciImp fibonacci;
+  FibonacciStreamImp fibonacci;
 
   @Before
   public void init() {
-    fibonacci = new FibonacciImp();
+    fibonacci = new FibonacciStreamImp();
   }
 
   @Test
   public void computePossitiveCase() {
     assertEquals(514229L, fibonacci.compute(29));
-  }
-
-  @Test(expected = IllegalArgumentException.class)
-  public void computeNegativeCaseExpectedAttribute() {
-    fibonacci.compute(-1);
   }
 
   @Rule
