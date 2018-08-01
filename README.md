@@ -1,1 +1,3 @@
 # gamesWithFibonacci
+
+run: mvn test
